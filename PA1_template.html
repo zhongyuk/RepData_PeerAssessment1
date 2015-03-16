@@ -144,10 +144,11 @@ interval_ts &lt;- as.POSIXlt(interval_ts_Numeric, tz=&quot;UTC&quot;, origin=&qu
 <div id="the-5-mins-interval-with-maximum-number-of-steps" class="section level3">
 <h3>2. The 5-mins interval with maximum number of steps</h3>
 <p>The 5-mins interval which contains the maximum number of steps is:</p>
-<pre class="r"><code>ind &lt;- max(Step_Interval$mean)
+<pre class="r"><code>ind &lt;- which(Step_Interval$mean == max(Step_Interval$mean))
 #interval_ts[ind]
 Step_Interval$interval[ind]</code></pre>
-<pre><code>## [1] 1705</code></pre>
+<pre><code>## [1] 835</code></pre>
+<p>Therefore the 5-mins interval with maximum number of steps is: 8:35 a.m.</p>
 </div>
 </div>
 <div id="imputing-missing-values" class="section level2">

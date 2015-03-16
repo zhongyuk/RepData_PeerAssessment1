@@ -149,15 +149,15 @@ plot(interval_ts, Step_Interval$mean, type="l",
 The 5-mins interval which contains the maximum number of steps is:
 
 ```r
-ind <- max(Step_Interval$mean)
+ind <- which(Step_Interval$mean == max(Step_Interval$mean))
 #interval_ts[ind]
 Step_Interval$interval[ind]
 ```
 
 ```
-## [1] 1705
+## [1] 835
 ```
-
+Therefore the 5-mins interval with maximum number of steps is: 8:35 a.m.
 
 
 ## Imputing missing values
